@@ -71,6 +71,7 @@ function AllCountries({goHome}) {
     useEffect(() => {
         setIsLoading(true)
         setError('');
+        selectBar.current.value = "none";
         getAllCountries();
     }, [goHome]);
 
