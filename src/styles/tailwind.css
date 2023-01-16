@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* theme colors */
+@layer base{
+    :root {
+        --color-main-background: hsl(0, 0%, 98%);
+        --color-main-elements: hsl(0, 0%, 100%);
+        --color-main-text: hsl(200, 15%, 8%);
+        --color-main-input: hsl(0, 0%, 100%);
+        --color-main-shadow: hsl(0, 0%, 52%);
+    }
+    .dark-mode {
+        --color-main-background: hsl(207, 26%, 17%);
+        --color-main-elements: hsl(209, 23%, 22%);
+        --color-main-text: hsl(0, 0%, 100%);
+        --color-main-input: hsl(209, 23%, 22%);
+        --color-main-shadow: hsl(200, 15%, 8%);
+    }
+}

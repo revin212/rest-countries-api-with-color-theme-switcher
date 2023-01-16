@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import AllCountries from './components/AllCountries';
+import CountryDetail from './components/CountryDetail'
+import { useRef,useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
+  const appRef = useRef();
+  const [goHome, setGoHome] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div ref={appRef} className="App dark-mode font-primary-font min-h-screen w-full bg-main-background text-main-color-text">
+        <Header appRef = {appRef} setGoHome = {setGoHome} goHome = {goHome} />
+
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<AllCountries goHome = {goHome} />} />
+            <Route path='/:countryName' element={<CountryDetail/>} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
