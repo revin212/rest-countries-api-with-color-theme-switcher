@@ -15,7 +15,6 @@ function Header({appRef, setGoHome, goHome}) {
 
     function getHome() {
         setGoHome(()=>goHome+1)
-        console.log(goHome)
     }
 
     return ( 
