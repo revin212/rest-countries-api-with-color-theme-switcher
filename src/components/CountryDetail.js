@@ -57,13 +57,13 @@ function CountryDetail() {
                                         <p><span className=" font-semibold">Native Name: </span>{country.name.common}</p>
                                         <p><span className=" font-semibold">Population: </span>{new Intl.NumberFormat().format(country.population)}</p>
                                         <p><span className=" font-semibold">Region: </span>{country.region}</p>
-                                        <p><span className=" font-semibold">Sub Region: </span>{country.subregion}</p>
-                                        <p><span className=" font-semibold">Capital: </span>{country.capital}</p>
+                                        <p><span className=" font-semibold">Sub Region: </span>{Boolean(country.subregion) && country.subregion}</p>
+                                        <p><span className=" font-semibold">Capital: </span>{Boolean(country.capital) && country.capital}</p>
                                     </div>
                                     <div className="extra-desc flex flex-col gap-3">
                                         <p><span className=" font-semibold">Top Level Domain: </span>{country.tld[0]}</p>
-                                        <p><span className=" font-semibold">Currencies: </span>{Object.keys(country.currencies)}</p>
-                                        <p><span className=" font-semibold">Languages: </span>{
+                                        <p><span className=" font-semibold">Currencies: </span>{country.currencies && Object.keys(country.currencies)}</p>
+                                        <p><span className=" font-semibold">Languages: </span>{country.languages &&
                                             Object.keys(country.languages)
                                             .map((val, index, arr) =>{
                                                 if(index === arr.length-1)
