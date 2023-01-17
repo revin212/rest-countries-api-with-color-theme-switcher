@@ -62,7 +62,7 @@ function CountryDetail() {
                                 </h1>
                                 <div className="desc text-md pb-[3rem] lg:pb-0 lg:flex lg:gap-[6rem]">
                                     {/* MAIN DESCRIPTION */}
-                                    <div className="main-desc flex flex-col gap-3 mb-[2rem]">
+                                    <div className="main-desc flex flex-col gap-3 mb-[2rem] lg:mb-0">
                                         <p><span className=" font-semibold">
                                             Native Name: </span>{country.name.common}
                                         </p>
@@ -106,6 +106,7 @@ function CountryDetail() {
                                 </div>
                             </div>
 
+                            {/* THE BORDER COUNTRIES DATA CANNOT BE FOUND ON THE FETCHED DATA*/}
                             {/* <div className="border-countries">
                                 <p>Border Countries</p>
                                 <div></div>

@@ -73,8 +73,8 @@ function AllCountries({goHome}) {
     // ----------------------------GET ALL COUNTRIES IF HOME BUTTON CLICKED--------------------------
     useEffect(() => {
         setIsLoading(true)
-        setError('');
-        selectBar.current.value = "none";
+        setError('');                       //clear error message
+        selectBar.current.value = "none";   //clear region filter selectbar
         getAllCountries();
     }, [goHome]);
 
